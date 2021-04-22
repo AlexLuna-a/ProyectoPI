@@ -12,8 +12,10 @@ $result = mysqli_query($link, $query);
 
         <link rel="stylesheet" type="text/css" href="./Assets/css/basics.css">
         <link rel="stylesheet" type="text/css" href="./Assets/css/bootstrap.min.css">
-
+        <script type="text/javascript" src="./Assets/JS/jquery-3.6.0.min.js" ></script>
         <script type="text/javascript" src="./Assets/JS/bootstrap.bundle.min.js" ></script>
+        <script type="text/javascript" src="./Assets/JS/lista_administradores.js" ></script>
+
 
     </head>
     <body>
@@ -44,21 +46,17 @@ $result = mysqli_query($link, $query);
                 </thead>
                 <tbody>
                     <?php while ($admin = mysqli_fetch_assoc($result) ) :?>
-                    <tr>
+                    <tr id="admin<?php echo $admin['id'] ?>">
                         <th scope="row"> <?php echo $admin["id"]?> </th>
                         <td><?php echo $admin["apellidos"].', '.$admin["nombre"]?> </td>
                         <td><?php echo $admin["Correo"]?> </td>
                         <td><?php echo $admin["rol"]?> </td>
-                        <td> <a href="#" class="btn btn-outline-danger" >Eliminar</a> </td>
+                        <td> <a href="" class="btn btn-outline-danger" onclick="eliminarAdmin(<?php echo $admin["id"].', \''.$admin['apellidos'].', '.$admin['nombre'].'\''?> ); return false;" >Eliminar</a> </td>
                     </tr>
                     <?php endwhile; ?>
                 </tbody>
             </table>
-
-
-
         </div>
-        <?php
-        ?>
+        <div class="ajax"></div>
     </body>
 </html>
