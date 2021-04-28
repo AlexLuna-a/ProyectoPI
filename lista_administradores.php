@@ -1,40 +1,23 @@
 <?php
+define('mainJS', './Assets/JS/lista_administradores.js');
+require_once ('./Includes/header.php');
 require_once './SQL/conecta.php';
 $link = conecta();
 $query = 'SELECT * FROM lista_administradores;';
 $result = mysqli_query($link, $query);
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Administradores</title>
-
-        <link rel="stylesheet" type="text/css" href="./Assets/css/basics.css">
-        <link rel="stylesheet" type="text/css" href="./Assets/css/bootstrap.min.css">
-        <script type="text/javascript" src="./Assets/JS/jquery-3.6.0.min.js" ></script>
-        <script type="text/javascript" src="./Assets/JS/bootstrap.bundle.min.js" ></script>
-        <script type="text/javascript" src="./Assets/JS/lista_administradores.js" ></script>
-
-
-    </head>
-    <body>
-        <div class="container pt-5" align="center">
-            <div class="title">
-                <h1 class="mainFont">Lista de Administradores</h1>
-            </div>
-
-            <table class="table w-75">
+    
+            <table class="table mt-5 w-75">
                 <thead>
                     <tr>
                         <th scope="col">
-                            <a href="#" class="btn btn-outline-success"> 
+                            <a href="nuevo_administradores.php" class="btn btn-outline-info"> 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                                 <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                                 </svg>
                                 añadir
                             </a></th>
-                        <th scope="col" colspan="4" class="heads">Administradores</th>			     
+                        <th scope="col" colspan="4" class="heads">Lista de administradores</th>			     
                     </tr>
                     <tr>
                         <th scope="col">ID</th>

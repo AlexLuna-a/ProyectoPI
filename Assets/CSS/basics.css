@@ -3,16 +3,27 @@
     Author     : alexl
 */
 body{
-    background-image: url(http://wallpapercave.com/wp/VkSPaWS.jpg);
+    /*/background-image: url(http://wallpapercave.com/wp/VkSPaWS.jpg);*/
+    background-image: url(../img/backgrund.webp);
     text-align: center;
     color: white;
     font-family: "GENTIUM BASIC" !important
 }
 table{
-    background: #05445E;
+    background: rgb(5,68,94, 0.75);
     color:  #D4F1F4 !important;
-    max-height: 700px;
+    max-height: 500px !important;
     overflow: auto;
+    box-shadow: 10px 10px 15px 1px rgba(0,43,59,1);
+}
+form{
+    background: rgb(212,241,255,0.50);
+    border-radius: 10px 10px 10px 10px;
+    text-align: left !important;
+}
+label{
+    font-weight: bold;
+    color: #05445E;
 }
 .title{
     font-family: "Open Sans";
@@ -20,6 +31,13 @@ table{
     font-weight: bold;
     color: #FFFFFF;
     text-shadow: 0 -1px 4px #dcdce4, 0 -2px 10px #D4F1F4, 0 -10px 20px #189AB4, 0 -18px 40px #05445E;
+}
+#formTitle{
+    color: #05445E;
+    text-shadow: 3px 4px 3px #FFFFFF;
+    font-family: "Open Sans";
+    font-weight: bolder;
+    text-align: center !important;
 }
 .heads{
     font-family: "Open Sans";
