@@ -30,4 +30,8 @@ CREATE VIEW lista_administradores AS
 SELECT id, nombre, apellidos, Correo, IF (rol>1, "Gerente", "Ejecutivo") AS rol 
 FROM administradores WHERE status = 1 AND eliminado = 0;
 
+CREATE VIEW detalle_administradores AS 
+SELECT id, CONCAT(nombre, " ", apellidos) AS nombre, correo, IF (rol>1, "Gerente", "Ejecutivo") AS rol, IF (status>0, "Activo", "Inactivo") AS status
+FROM administradores;
+
 
