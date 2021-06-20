@@ -9,10 +9,12 @@ $result = mysqli_query($link, $query);
 $admin = mysqli_fetch_assoc($result);
 ?>
 
+
 <table class="table w-50 mt-5">
 	 <thead>
         <tr>
-            <th scope="col" colspan="2" class="heads">Detalle de administrador</th>			     
+            <th><img src="files/<?php echo $admin['archivo']?>" height="100" width="100" /></th>
+            <th scope="col" class="heads">Detalle de administrador</th>			     
         </tr>
     </thead>
     <tbody>

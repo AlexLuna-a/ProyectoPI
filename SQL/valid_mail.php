@@ -10,7 +10,7 @@ $link = conecta();
 $query = "SELECT * "
         . "FROM administradores "
         . "WHERE correo = '$email'";
-if(isset($id)){
+if(isset($id) && $id > 0){
     $query .= "AND id != $id";
 }
 $query .=';';
@@ -18,6 +18,8 @@ $query .=';';
     
 $result = mysqli_query($link, $query);
 echo mysqli_num_rows($result);
+
+
 
 
 

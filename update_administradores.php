@@ -1,5 +1,5 @@
 <?php
-define('mainJS', './Assets/JS/update_administradores.js');
+define('mainJS', './Assets/JS/forms.js');
 require_once './Includes/header.php';
 require_once './SQL/Conecta.php';
 $id = $_REQUEST['id'];
@@ -10,7 +10,7 @@ $result = mysqli_query($link, $query);
 $admin = mysqli_fetch_assoc($result);
 ?>
 <div class="w-75">
-    <form class="w-75 mx-auto pt-2 px-5 pb-3">
+    <form class="w-75 mx-auto pt-2 px-5 pb-3" id="form" enctype="multipart/form-data" >
         <h1 class="mx-auto" id="formTitle">Editar registro</h1>
         <div class="form-group pt-2">
 
@@ -36,15 +36,26 @@ $admin = mysqli_fetch_assoc($result);
 
         <div class="form-group pb-2">
     <label for="exampleFormControlSelect1">Rol</label>
-        <select class="form-control" id="rol">
+        <select class="form-control" id="rol" name="rol">
           <option value="0">Elige una opcion</option>
           <option value="1" <?php if($admin['rol']==1) echo 'selected'; ?> >Ejecutivo</option>
           <option value="2" <?php if($admin['rol']==2) echo 'selected'; ?> >Gerente</option>
         </select>
     </div>
 
+    <label for="file">Imagen</label> <br/>
+        <div class="input-group pb-2">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="file" name="file">
+                <label class="custom-file-label" for="file">Añadir imagen</label>
+            </div>
+        </div>
+
+
+
+
         <div class="row justify-content-around">
-        <button type="submit" class="btn btn-info col-3" id="save" onclick="valid_campos(); return false;" >Añadir</button>
+        <button type="submit" class="btn btn-info col-3">Actualizar</button>
         <button type="button" class="btn btn-dark col-3" onclick="regresar(); return false;">Regresar</button>
         </div>
         <div id="alerta" class="mt-3"></div>
