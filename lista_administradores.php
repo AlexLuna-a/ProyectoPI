@@ -1,5 +1,5 @@
 <?php
-define('mainJS', './Assets/JS/lista_administradores.js');
+define('mainJS', '<script type="text/javascript" src="./Assets/JS/lista_administradores.js" ></script>');
 require_once ('./Includes/header.php');
 require_once './SQL/conecta.php';
 $link = conecta();

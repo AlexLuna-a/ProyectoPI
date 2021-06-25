@@ -1,5 +1,5 @@
 <?php
-define('mainJS', './Assets/JS/forms.js');
+define('mainJS', '<script type="text/javascript" src="./Assets/JS/forms.js" ></script>');
 require_once './Includes/header.php';
 require_once './SQL/Conecta.php';
 $id = $_REQUEST['id'];
@@ -9,7 +9,7 @@ $query = "SELECT * FROM administradores "
 $result = mysqli_query($link, $query);
 $admin = mysqli_fetch_assoc($result);
 ?>
-<div class="w-75">
+<div class="w-75 mt-2">
     <form class="w-75 mx-auto pt-2 px-5 pb-3" id="form" enctype="multipart/form-data" >
         <h1 class="mx-auto" id="formTitle">Editar registro</h1>
         <div class="form-group pt-2">

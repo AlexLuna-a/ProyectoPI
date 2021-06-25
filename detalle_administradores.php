@@ -1,5 +1,5 @@
 <?php
-define('mainJS', './Assets/JS/nuevo_administradores.js');
+define('mainJS', ' ');
 require_once ('./Includes/header.php');
 require_once './SQL/conecta.php';
 $id = $_REQUEST['id'];

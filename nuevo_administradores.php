@@ -1,9 +1,9 @@
 <?php
-define('mainJS', './Assets/JS/forms.js');
+define('mainJS', '<script type="text/javascript" src="./Assets/JS/forms.js" ></script>');
 require_once './Includes/header.php';
 ?>
 
-<div class="w-75">
+<div class="w-75 mt-2">
     <form class="w-75 mx-auto pt-2 px-5 pb-3" id="form" enctype="multipart/form-data">
         <h1 class="mx-auto" id="formTitle">Nuevo registro</h1>
         <div class="form-group pt-1">
