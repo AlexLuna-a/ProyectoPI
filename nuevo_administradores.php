@@ -12,7 +12,7 @@ require_once './Includes/header.php';
                 <div class="col">
                     <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingresa tu(s) Nombre(s)">
                 </div>
-                <div class="col">
+                <div class="col mt-2">
                     <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Ingresa tu(s) Apellido(s)">
                 </div>
             </div>
@@ -35,13 +35,10 @@ require_once './Includes/header.php';
             </select>
         </div>
 
-        <label for="file">Imagen</label> <br/>
-        <div class="input-group pb-2">
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="file" name="file">
-                <label class="custom-file-label" for="file">Añadir imagen</label>
-            </div>
-        </div>
+        <div class="pb-3">
+    <label for="file" class="form-label">Imagen</label>
+    <input class="form-control" type="file" id="file" name="file">
+    </div>
         
         
         <div class="row justify-content-around pt-2">

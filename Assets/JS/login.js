@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
 			})
 			.done(function(result) {
 				if(result == 1){
-					location.href = 'lista_administradores.php';
+					location.href = 'bienvenido.php';
 
 
 				}else {

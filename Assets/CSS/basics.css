@@ -3,7 +3,6 @@
     Author     : alexl
 */
 body{
-    /*/background-image: url(http://wallpapercave.com/wp/VkSPaWS.jpg);*/
     background-image: url(../img/backgrund.webp);
     text-align: center;
     color: white;
@@ -16,8 +15,7 @@ table{
     overflow: auto;
     box-shadow: 10px 10px 15px 1px rgba(0,43,59,1);
 }
-form{
-    /*background: rgb(212,241,255,0.50);*/
+form{ 
     background: rgb(5,68,94, 0.75);
     border-radius: 10px 10px 10px 10px;
     text-align: left !important;
@@ -47,4 +45,33 @@ label{
     text-align: center;
     font-size: 2.5rem;
 }
+#logoAppBack{
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+#titlesAppBack{
 
+}
+#cabecera{
+    
+background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,10,48,1) 30%, rgba(0,12,102,1) 60%, rgba(104,179,255,1) 100%);
+    border-radius: 30px;
+    background-color: white;
+}
+#userNameTag{
+    color: white !important;
+     font-family: "Open Sans";
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+#bienvenido{
+    color: white !important;
+}

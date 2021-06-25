@@ -20,7 +20,7 @@ $admin = mysqli_fetch_assoc($result);
             <div class="col">
                 <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingresa tu(s) Nombre(s)" value="<?php echo$admin['nombre']; ?>">
             </div>
-            <div class="col">
+            <div class="col mt-2">
                 <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Ingresa tu(s) Apellido(s)" value="<?php echo$admin['apellidos']; ?>">
             </div>
         </div>
@@ -42,15 +42,10 @@ $admin = mysqli_fetch_assoc($result);
           <option value="2" <?php if($admin['rol']==2) echo 'selected'; ?> >Gerente</option>
         </select>
     </div>
-
-    <label for="file">Imagen</label> <br/>
-        <div class="input-group pb-2">
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="file" name="file">
-                <label class="custom-file-label" for="file">Añadir imagen</label>
-            </div>
-        </div>
-
+    <div class="pb-3">
+    <label for="file" class="form-label">Imagen</label>
+    <input class="form-control" type="file" id="file" name="file">
+    </div>
 
 
 

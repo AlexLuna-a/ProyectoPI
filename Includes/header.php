@@ -11,7 +11,6 @@
         <script type="text/javascript" src="./Assets/JS/jquery-3.6.0.min.js" ></script>
         <script type="text/javascript" src="./Assets/JS/basics.js" ></script>
         <script type="text/javascript" src="<?php echo mainJS ?>" ></script>
-        <!--<script type="text/javascript" src="./Assets/JS/lista_administradores.js" ></script>-->
 
 
     </head>
