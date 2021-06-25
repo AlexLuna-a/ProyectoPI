@@ -1,5 +1,7 @@
 <?php 
 session_start();
+if(!isset($_SESSION['backUser']))
+    header('Location: ./index.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -135,10 +137,10 @@ session_start();
                                     <img src="<?php echo './files/' . $_SESSION['backUser']['archivo']; ?>" alt="mdo" width="50" height="50" class="rounded-circle">
                                 </a>
                                 <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                                    <li><a class="dropdown-item" href="#">Detalle</a></li>
-                                    <li><a class="dropdown-item" href="#">Actualizar</a></li>
+                                    <li><a class="dropdown-item" href="detalle_administradores.php?id=<?php echo $_SESSION['backUser']['id'] ?>">Detalle</a></li>
+                                    <li><a class="dropdown-item" href="update_administradores.php?id=<?php echo $_SESSION['backUser']['id'] ?>">Actualizar</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                    <li><a class="dropdown-item" href="./SQL/logout.php">Sign out</a></li>
                                 </ul>
                             </div>
                         </div>

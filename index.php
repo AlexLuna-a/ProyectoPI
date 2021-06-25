@@ -1,3 +1,11 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['backUser']))
+    header('Location: ./bienvenido.php');
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
