@@ -43,7 +43,7 @@ require_once './Includes/header.php';
         
         <div class="row justify-content-around pt-2">
             <button type="submit" class="btn btn-info col-3" >Añadir</button>
-            <button type="button" class="btn btn-dark col-3" onclick="regresar(); return false;">Regresar</button>
+            <button type="button" class="btn btn-dark col-3" onclick="regresar_admin(); return false;">Regresar</button>
         </div>
         <div id="alerta" class="mt-1"></div>
     </form>

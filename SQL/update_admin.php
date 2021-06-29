@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'Conecta.php';
 
 $newPass =" ";
@@ -36,5 +37,14 @@ $query = "UPDATE administradores "
         . "WHERE id = $id;";
 
 $result = mysqli_query($link, $query);
+
+
+if ($id == $_SESSION['backUser']['id']) {
+    $query = "SELECT * FROM detalle_administradores WHERE id = $id";
+    $result = mysqli_query($link, $query);
+    $user = mysqli_fetch_assoc($result);
+    $_SESSION['backUser'] = $user;
+}
+
 header('Location: ../lista_administradores.php');
 

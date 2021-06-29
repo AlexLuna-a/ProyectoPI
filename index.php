@@ -41,7 +41,6 @@ if(isset($_SESSION['backUser']))
 
         <div class="row justify-content-around">
         <button type="submit" class="btn btn-info col-3">Ingresar</button>
-        <button type="button" class="btn btn-dark col-3" onclick="regresar(); return false;">Regresar</button>
         </div>
         <div id="alerta" class="mt-3"></div>
     </form>

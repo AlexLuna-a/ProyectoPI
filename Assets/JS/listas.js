@@ -1,18 +1,19 @@
 
 //Eliminar lógica de un registro
-function eliminarAdmin (id, nombre) {
+function eliminarLogica (id, nombre, tipo) {
+
 
 
 	if (confirm('¿Seguro que desea eliminar a '+nombre+'?')) {
 		$.ajax({
-		url: './SQL/eliminacionLogica.php',
+		url: './SQL/eliminacionLogica_'+tipo+'.php',
 		type: 'POST',
 		dataType: 'text',
 		data: {id: id},
 	})
 	.done(function(result) {
 		if (result == '1') {
-			$('#admin'+id).hide('slow');
+			$('#'+tipo+id).hide('slow');
 		}
 		else {
 			alert('Error al eliminar');

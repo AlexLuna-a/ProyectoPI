@@ -51,7 +51,7 @@ $admin = mysqli_fetch_assoc($result);
 
         <div class="row justify-content-around">
         <button type="submit" class="btn btn-info col-3">Actualizar</button>
-        <button type="button" class="btn btn-dark col-3" onclick="regresar(); return false;">Regresar</button>
+        <button type="button" class="btn btn-dark col-3" onclick="regresar_admin(); return false;">Regresar</button>
         </div>
         <div id="alerta" class="mt-3"></div>
     </form>

@@ -6,6 +6,9 @@
 CREATE DATABASE ProyectoPI;
 USE ProyectoPI;
 
+
+/* --ADMINISTRADORES--  */
+
 CREATE TABLE administradores(
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 nombre VARCHAR(150) NOT NULL,
@@ -35,3 +38,44 @@ SELECT id, CONCAT(nombre, " ", apellidos) AS nombre, correo, IF (rol>1, "Gerente
 FROM administradores;
 
 
+
+
+/* --PRODUCTOS--  */
+
+CREATE TABLE productos(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(128) NOT NULL,
+    codigo VARCHAR(32) NOT NULL UNIQUE,
+    descripcion TEXT NOT NULL,
+    costo DOUBLE NOT NULL,
+    stock INT NOT NULL,
+    archivo_n VARCHAR(255) NOT NULL,
+    archivo VARCHAR(128) NOT NULL,
+    status INT NOT NULL DEFAULT 1,
+    eliminado INT NOT NULL DEFAULT 0
+);
+
+INSERT INTO `productos` 
+(`id`, `nombre`, `codigo`, `descripcion`, `costo`, `stock`, `archivo_n`, `archivo`, `status`, `eliminado`) 
+VALUES 
+(NULL, 'Prueba ', 'P1', 'Esta es una prueba para el funcionamiento  de la tabla', '100.10', '10', '39a114ed74f70b34510483bf4eab0278.jfif', '39a114ed74f70b34510483bf4eab0278.jfif', '1', '0');
+INSERT INTO `productos` 
+(`id`, `nombre`, `codigo`, `descripcion`, `costo`, `stock`, `archivo_n`, `archivo`, `status`, `eliminado`) 
+VALUES 
+(NULL, 'Prueba 2', 'P2', 'Esta es una prueba para el funcionamiento  de la tabla', '10', '1', '39a114ed74f70b34510483bf4eab0278.jfif', '39a114ed74f70b34510483bf4eab0278.jfif', '1', '0');
+INSERT INTO `productos` (`id`, `nombre`, `codigo`, `descripcion`, `costo`, `stock`, `archivo_n`, `archivo`, `status`, `eliminado`) 
+VALUES 
+(NULL, 'Prueba 3', 'P3', 'Esta es una prueba para el funcionamiento  de la tabla', '1.15', '100', '39a114ed74f70b34510483bf4eab0278.jfif', '39a114ed74f70b34510483bf4eab0278.jfif', '1', '0');
+
+
+
+
+/* --BANNERS--  */
+
+CREATE TABLE banners (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(128) NOT NULL,
+    archivo VARCHAR(128) NOT NULL,
+    status INT NOT NULL DEFAULT 1,
+    eliminado INT NOT NULL DEFAULT 0
+);

@@ -40,4 +40,4 @@ $admin = mysqli_fetch_assoc($result);
     	</tr>
     </tbody>
 </table>
-<button type="button" class="btn btn-dark " onclick="regresar(); return false;">Regresar</button>
+<button type="button" class="btn btn-dark " onclick="regresar_admin(); return false;">Regresar</button>
