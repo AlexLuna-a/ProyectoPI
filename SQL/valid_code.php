@@ -9,9 +9,9 @@ $id = $_REQUEST['id'];
 $link = conecta();
 $query = "SELECT * "
         . "FROM productos "
-        . "WHERE codigo = '$code'";
+        . "WHERE codigo = '$code' AND status = 1 AND eliminado = 0 ";
 if(isset($id) && $id > 0){
-    $query .= "AND id != $id";
+    $query .= " AND id != $id";
 }
 $query .=';';
 
