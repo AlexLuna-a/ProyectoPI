@@ -45,7 +45,7 @@ $product = mysqli_fetch_assoc($result);
     	</tr>
         <tr>
     		<th>Estatus</th>
-    		<td align="center"><?php echo $product['status'] ?> </td>
+    		<td align="center"><?php echo ($product['status']==1)? 'Activo':'No activo' ?> </td>
     	</tr>
     </tbody>
 </table>

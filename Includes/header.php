@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION['backUser']))
+if (!isset($_SESSION['backUser']))
     header('Location: ./index.php');
 ?>
 <!DOCTYPE html>
@@ -124,8 +124,8 @@ if(!isset($_SESSION['backUser']))
                                 <li><a href="bienvenido.php" class="nav-link px-2 link-light">Bienvenido</a></li>
                                 <li><a href="lista_administradores.php" class="nav-link px-2 link-light">Administradores</a></li>
                                 <li><a href="lista_productos.php" class="nav-link px-2 link-light">Productos</a></li>
+                                <li><a href="lista_banners.php" class="nav-link px-2 link-light">Banners</a></li>
                                 <li><a href="#" class="nav-link px-2 link-light">seccion 3</a></li>
-                                <li><a href="#" class="nav-link px-2 link-light">seccion 4</a></li>
                             </ul>
 
                             <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">

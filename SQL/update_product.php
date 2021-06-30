@@ -24,10 +24,6 @@ if (isset($file_name) && strlen($file_name) > 0) {
 }
 
 
-if ($file_name != '') {
-  
-}
-
 
 
 

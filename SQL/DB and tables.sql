@@ -79,3 +79,7 @@ CREATE TABLE banners (
     status INT NOT NULL DEFAULT 1,
     eliminado INT NOT NULL DEFAULT 0
 );
+
+INSERT INTO `banners` (`id`, `nombre`, `archivo`, `status`, `eliminado`) VALUES (NULL, 'Prueba 1', 'none', '1', '0');
+INSERT INTO `banners` (`id`, `nombre`, `archivo`, `status`, `eliminado`) VALUES (NULL, 'Prueba 2', 'none', '1', '0');
+INSERT INTO `banners` (`id`, `nombre`, `archivo`, `status`, `eliminado`) VALUES (NULL, 'Prueba 3', 'none', '1', '0');
